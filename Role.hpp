@@ -140,6 +140,7 @@ namespace final{
         // Check if target is killed
         if (target->health <= 0 && target->alive) {
             target->alive = false;
+            Base::aliveNumber--;
             // Output the correct class name of the target
             if (dynamic_cast<Fighter*>(target)) {
                 std::cout << "Fighter " << target->name << " is killed" << std::endl;
@@ -175,6 +176,7 @@ namespace final{
         // Check if target is killed
         if (target->health <= 0 && target->alive) {
             target->alive = false;
+            Base::aliveNumber--;
             // Output the correct class name of the target
             if (dynamic_cast<Fighter*>(target)) {
                 std::cout << "Fighter " << target->name << " is killed" << std::endl;
@@ -207,6 +209,7 @@ namespace final{
         // Check if target is killed
         if (target->health <= 0 && target->alive) {
             target->alive = false;
+            Base::aliveNumber--;
             // Output the correct class name of the target
             if (dynamic_cast<Fighter*>(target)) {
                 std::cout << "Fighter " << target->name << " is killed" << std::endl;

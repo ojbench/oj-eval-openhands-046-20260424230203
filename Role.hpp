@@ -130,7 +130,7 @@ namespace final{
             damage = std::max(0, damage - target->attack);
             // Attacker takes counter damage unless attacker is Caster
             if (dynamic_cast<Caster*>(this) == nullptr) {
-                health -= (target->attack * (1 - (dynamic_cast<Caster*>(this) != nullptr)));
+                health -= target->attack;
             }
         }
 
@@ -140,7 +140,7 @@ namespace final{
         // Check if target is killed
         if (target->health <= 0 && target->alive) {
             target->alive = false;
-            std::cout << "Fighter " << target->name << " is killed" << std::endl;
+            std::cout << "Protector " << target->name << " is killed" << std::endl;
         }
     }
 
@@ -158,7 +158,7 @@ namespace final{
             damage = std::max(0, damage - target->attack);
             // Attacker takes counter damage unless attacker is Caster
             if (dynamic_cast<Caster*>(this) == nullptr) {
-                health -= (target->attack * (1 - (dynamic_cast<Caster*>(this) != nullptr)));
+                health -= target->attack;
             }
         }
 
@@ -168,7 +168,7 @@ namespace final{
         // Check if target is killed
         if (target->health <= 0 && target->alive) {
             target->alive = false;
-            std::cout << "Protector " << target->name << " is killed" << std::endl;
+            std::cout << "Caster " << target->name << " is killed" << std::endl;
         }
     }
 
@@ -193,7 +193,7 @@ namespace final{
         // Check if target is killed
         if (target->health <= 0 && target->alive) {
             target->alive = false;
-            std::cout << "Caster " << target->name << " is killed" << std::endl;
+            std::cout << "Fighter " << target->name << " is killed" << std::endl;
         }
     }
 

@@ -140,7 +140,14 @@ namespace final{
         // Check if target is killed
         if (target->health <= 0 && target->alive) {
             target->alive = false;
-            std::cout << "Protector " << target->name << " is killed" << std::endl;
+            // Output the correct class name of the target
+            if (dynamic_cast<Fighter*>(target)) {
+                std::cout << "Fighter " << target->name << " is killed" << std::endl;
+            } else if (dynamic_cast<Protector*>(target)) {
+                std::cout << "Protector " << target->name << " is killed" << std::endl;
+            } else if (dynamic_cast<Caster*>(target)) {
+                std::cout << "Caster " << target->name << " is killed" << std::endl;
+            }
         }
     }
 
@@ -168,7 +175,14 @@ namespace final{
         // Check if target is killed
         if (target->health <= 0 && target->alive) {
             target->alive = false;
-            std::cout << "Caster " << target->name << " is killed" << std::endl;
+            // Output the correct class name of the target
+            if (dynamic_cast<Fighter*>(target)) {
+                std::cout << "Fighter " << target->name << " is killed" << std::endl;
+            } else if (dynamic_cast<Protector*>(target)) {
+                std::cout << "Protector " << target->name << " is killed" << std::endl;
+            } else if (dynamic_cast<Caster*>(target)) {
+                std::cout << "Caster " << target->name << " is killed" << std::endl;
+            }
         }
     }
 
@@ -193,7 +207,14 @@ namespace final{
         // Check if target is killed
         if (target->health <= 0 && target->alive) {
             target->alive = false;
-            std::cout << "Fighter " << target->name << " is killed" << std::endl;
+            // Output the correct class name of the target
+            if (dynamic_cast<Fighter*>(target)) {
+                std::cout << "Fighter " << target->name << " is killed" << std::endl;
+            } else if (dynamic_cast<Protector*>(target)) {
+                std::cout << "Protector " << target->name << " is killed" << std::endl;
+            } else if (dynamic_cast<Caster*>(target)) {
+                std::cout << "Caster " << target->name << " is killed" << std::endl;
+            }
         }
     }
 
